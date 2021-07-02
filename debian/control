@@ -1,0 +1,39 @@
+Source: nebula
+Section: net
+Priority: optional
+Maintainer: Alex David <flu0r1ne@flu0r1ne.net>
+Build-Depends: debhelper-compat (= 12),
+               dh-golang (>= 1.6~),
+               golang-go (>= 2:1.0~),
+               golang-1.16-go,
+               golang-golang-x-crypto-dev,
+               golang-github-anmitsu-go-shlex-dev,
+               golang-github-armon-go-radix-dev,
+               golang-github-cyberdelia-go-metrics-graphite-dev,
+               golang-github-imdario-mergo-dev,
+               golang-github-miekg-dns-dev,
+               golang-github-prometheus-client-golang-dev,
+               golang-github-kardianos-service-dev,
+               golang-github-sirupsen-logrus-dev,
+               golang-github-vishvananda-netlink-dev,
+               golang-github-flynn-noise-dev,
+               golang-github-skip2-go-qrcode-dev,
+               golang-google-protobuf-dev,
+               golang-gogoprotobuf-dev,
+               golang-github-nbrownus-go-metrics-prometheus-dev
+XS-Go-Import-Path: github.com/slackhq/nebula
+Standards-Version: 4.4.1
+Homepage: https://github.com/slackhq/nebula
+
+Package: nebula
+Architecture: all
+Depends: libc6 (>=2.4),
+         ${shlibs:Depends},
+         ${misc:Depends}
+Description: performant, scalable network overlay
+ Nebula is a scalable overlay networking tool with a focus on performance, 
+ simplicity and security. It is intended to be more robust than current virtual networking
+ solutions by providing peer-to-peer connectivity and NAT traversal mechanisms. Nebula uses
+ state-of-the-art cryptography based on the "Noise" protocal.
+ .
+ This package provide the binaries and default configuration for Nebula.
